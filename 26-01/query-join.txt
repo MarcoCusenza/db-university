@@ -1,0 +1,26 @@
+01 -
+SELECT `students`.`name` AS 'nome_studente', `students`.`surname` AS 'cognome_studente', `degrees`.`name` AS 'nome_laurea'
+FROM `students` 
+JOIN `degrees` ON `students`.`degree_id` = `degrees`.`id` 
+WHERE `degrees`.`name`='Corso di Laurea in Economia';
+
+02-
+SELECT `degrees`.`name` AS 'nome_corso', `departments`.`name` AS 'nome_dipartimento' 
+FROM `degrees` 
+JOIN `departments` ON `degrees`.`department_id`=`departments`.`id` 
+WHERE `departments`.`name`='Dipartimento di Neuroscienze';
+
+03-
+SELECT *
+FROM `courses`
+JOIN `course_teacher` ON `courses`.`id` = `course_teacher`.`course_id`
+JOIN `teachers` ON `teachers`.`id` = `course_teacher`.`teacher_id`
+WHERE `teachers`.`name`='Fulvio' AND `teachers`.`surname`='Amato';
+
+04-
+
+05-
+
+06-
+
+07-
